@@ -2,6 +2,7 @@
 
 ## Architecture
 <img width="1042" alt="architecture-screenshot" src="images/Architecture.png">
+
 ## Configure AWS Cloud9
 
 ### 1. Create AWS Cloud9 environment
