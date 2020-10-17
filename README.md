@@ -1,5 +1,7 @@
 # Build HTTP API Based Services using Amazon API Gateway, AWS PrivateLink, AWS Fargate and AWS CDK
 
+## Architecture
+<img width="1042" alt="architecture-screenshot" src="images/Architecture.png">
 ## Configure AWS Cloud9
 
 ### 1. Create AWS Cloud9 environment
