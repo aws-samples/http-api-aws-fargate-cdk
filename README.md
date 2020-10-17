@@ -1,5 +1,5 @@
 # Build HTTP API Based Services using Amazon API Gateway, AWS PrivateLink, AWS Fargate and AWS CDK
-
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 ## Architecture
 <img width="1042" alt="architecture-screenshot" src="images/Architecture.png">
 
