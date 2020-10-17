@@ -5,32 +5,32 @@
 
 ## Configure AWS Cloud9
 
-### 1. Create AWS Cloud9 environment
+####  Create AWS Cloud9 environment
 It is recommended too create an AWS Cloud9 environment to run these code samples. Follow the instructions [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment-main.html).
 
-### 2. Resize AWS Cloud9 environment
+####  Resize AWS Cloud9 environment
 
 You can also resize the Amazon Elastic Block Store (Amazon EBS) volume that is associated with an Amazon EC2 instance for an environment. The detailed steps are documented [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/move-environment.html#move-environment-resize).
 
-### 3. Upload the code sample folder to Cloud9
+####  Upload the code sample folder to Cloud9
 
 Use File/Upload Local Files ... from the Cloud9 menu to upload the code sample files ino the AWS Cloud9 environment.
 
 ## Deploy the code samples
 The following commands should be run from the root of the code sample directory.
 
-### 1. Install AWS CDK packages
+####  Install AWS CDK packages
 
 `npm install`
 
-### 2. Compile typescript files
+####  Compile typescript files
 
 `npm run build`
 
-### 3. Synthesize CDK
+####  Synthesize CDK
 
 `cdk synth`
 
-### 4. Deploy the CDK stack
+####  Deploy the CDK stack
 
 `cdk deploy`
