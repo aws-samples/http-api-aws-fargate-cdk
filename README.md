@@ -1,17 +1,33 @@
-## My Project
+# Build HTTP API Based Services using Amazon API Gateway, AWS PrivateLink, AWS Fargate and AWS CDK
 
-TODO: Fill this README out!
+## Configure AWS Cloud9
 
-Be sure to:
+### 1. Create AWS Cloud9 environment
+It is recommended too create an AWS Cloud9 environment to run these code samples. Follow the instructions [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment-main.html).
 
-* Change the title in this README
-* Edit your repository description on GitHub
+### 2. Resize AWS Cloud9 environment
 
-## Security
+You can also resize the Amazon Elastic Block Store (Amazon EBS) volume that is associated with an Amazon EC2 instance for an environment. The detailed steps are documented [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/move-environment.html#move-environment-resize).
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+### 3. Upload the code sample folder to Cloud9
 
-## License
+Use File/Upload Local Files ... from the Cloud9 menu to upload the code sample files ino the AWS Cloud9 environment.
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+## Deploy the code samples
+The following commands should be run from the root of the code sample directory.
 
+### 4. Install AWS CDK packages
+
+`npm install`
+
+### 5. Compile typescript files
+
+`npm run build`
+
+### 6. Synthesize CDK
+
+`cdk synth`
+
+### 7. Deploy the CDK stack
+
+`cdk deploy`
