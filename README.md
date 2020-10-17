@@ -19,18 +19,18 @@ Use File/Upload Local Files ... from the Cloud9 menu to upload the code sample f
 ## Deploy the code samples
 The following commands should be run from the root of the code sample directory.
 
-### 4. Install AWS CDK packages
+### 1. Install AWS CDK packages
 
 `npm install`
 
-### 5. Compile typescript files
+### 2. Compile typescript files
 
 `npm run build`
 
-### 6. Synthesize CDK
+### 3. Synthesize CDK
 
 `cdk synth`
 
-### 7. Deploy the CDK stack
+### 4. Deploy the CDK stack
 
 `cdk deploy`
