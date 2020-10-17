@@ -4,7 +4,7 @@
 <img width="1042" alt="architecture-screenshot" src="images/Architecture.png">
 
 ## Configure AWS Cloud9
-
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 ####   Create AWS Cloud9 environment
 It is recommended too create an AWS Cloud9 environment to run these code samples. Follow the instructions [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment-main.html).
 
