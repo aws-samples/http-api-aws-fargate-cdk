@@ -31,6 +31,10 @@
 ####   Compile typescript files
 
   - `npm run build`
+  
+####   Bootstrap the CDK stack
+
+  - `cdk bootstrap`
 
 ####   Synthesize CDK
 
