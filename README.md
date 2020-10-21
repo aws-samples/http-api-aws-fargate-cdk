@@ -26,16 +26,18 @@
 
 ####   Install AWS CDK packages
 
-  - `npm install`
+   ```bash
+   npm install
+   ```
 
 ####   Compile typescript files
 
-  - `npm run build`
+  ```bash
+  npm run build
+  ```
   
 #### Bootstrap an environment
 ```bash
- npm install
- npm run build
  cdk bootstrap
 ```
 
