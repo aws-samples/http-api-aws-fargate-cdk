@@ -8,18 +8,23 @@
 ## Architecture
 <img width="1042" alt="architecture-screenshot" src="images/Architecture.png">
 
-## Configure AWS Cloud9
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-####   Create AWS Cloud9 environment
-   It is recommended too create an AWS Cloud9 environment to run these code samples. Follow the instructions [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment-main.html).
+## Prerequisites
 
-####   Resize AWS Cloud9 environment
+Before you build the whole infrastructure, you will need to meet the following pre-requisites.
 
-   You can also resize the Amazon Elastic Block Store (Amazon EBS) volume that is associated with an Amazon EC2 instance for an environment. The detailed steps are documented [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/move-environment.html#move-environment-resize).
+### AWS account
 
-####   Upload the code sample folder to Cloud9
+Ensure you have access to an AWS account, and a set of credentials with *Administrator* permissions. **Note:** In a production environment we would recommend locking permissions down to the bare minimum needed to operate the pipeline.
 
-   Use File/Upload Local Files ... from the Cloud9 menu to upload the code sample files ino the AWS Cloud9 environment.
+### Create an AWS Cloud9 environment
+
+Log into the AWS Management Console and search for Cloud9 services in the search bar. Click Cloud9 and create an AWS Cloud9 environment in the `us-east-1` region based on Amazon Linux 2.
+
+### Configure the AWS Cloud environment
+
+Launch the AWS Cloud9 IDE. In a new terminal session, follow the instructions to configure the AWS Cloud9 environment.
+
+![Architecture](images/Cloud9.png)
 
 ## Deploy the code samples
    The following commands should be run from the root of the code sample directory.
