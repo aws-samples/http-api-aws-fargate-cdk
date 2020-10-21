@@ -32,14 +32,15 @@
 
   - `npm run build`
   
-####   Bootstrap the CDK stack
+#### Bootstrap an environment
+```bash
+ npm install
+ npm run build
+ cdk bootstrap
+```
 
-  - `cdk bootstrap`
-
-####   Synthesize CDK
-
-  - `cdk synth`
-
-####   Deploy the CDK stack
-
-  - `cdk deploy`
+#### Deploy the stack
+```bash
+ cdk synth
+ cdk deploy
+```
