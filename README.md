@@ -26,6 +26,9 @@ Launch the AWS Cloud9 IDE. In a new terminal session, follow the instructions to
 
 ![Architecture](images/Cloud9.png)
 
+## Install AWS CDK
+`npm install -g aws-cdk`
+
 ## Deploy the code samples
    The following commands should be run from the root of the code sample directory.
 
@@ -39,7 +42,7 @@ Launch the AWS Cloud9 IDE. In a new terminal session, follow the instructions to
   @aws-cdk/aws-ecr \
   @aws-cdk/aws-iam \
   @aws-cdk/aws-logs \
-  @aws-cdk/aws-apigatewayv2 \
+  @aws-cdk/aws-apigatewayv2
    ```
 
 ####   Compile typescript files
