@@ -32,7 +32,14 @@ Launch the AWS Cloud9 IDE. In a new terminal session, follow the instructions to
 ####   Install AWS CDK packages
 
    ```bash
-   npm install
+   npm install \
+  @aws-cdk/aws-elasticloadbalancingv2 \
+  @aws-cdk/aws-ec2 \
+  @aws-cdk/aws-ecs \
+  @aws-cdk/aws-ecr \
+  @aws-cdk/aws-iam \
+  @aws-cdk/aws-logs \
+  @aws-cdk/aws-apigatewayv2 \
    ```
 
 ####   Compile typescript files
