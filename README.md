@@ -8,6 +8,16 @@
 ## Architecture
 <img width="1042" alt="architecture-screenshot" src="images/Architecture.png">
 
+## Deployment Steps
+
+Pre-requisites:
+
+-	An [AWS account](https://aws.amazon.com/) without any existing transit gateways in us-east-1 or eu-west-1
+-	[AWS CLI, authenticated and configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
+-	[Python 3.6+](https://www.python.org/downloads/)
+-	[AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
+-	[Git](http://git-scm.com/downloads)
+
 ## Prerequisites
 
 Before you build the whole infrastructure, you will need to meet the following pre-requisites.
