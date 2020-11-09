@@ -12,9 +12,8 @@
 
 Pre-requisites:
 
--	An [AWS account](https://aws.amazon.com/) without any existing transit gateways in us-east-1 or eu-west-1
+-	An [AWS account](https://aws.amazon.com/)
 -	[AWS CLI, authenticated and configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
--	[Python 3.6+](https://www.python.org/downloads/)
 -	[AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
 -	[Git](http://git-scm.com/downloads)
 
