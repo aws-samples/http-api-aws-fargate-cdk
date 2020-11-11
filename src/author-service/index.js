@@ -13,10 +13,10 @@ const authors = [
 
 //READ Request Handlers
 
-app.get('/', (req, res) => {
-    console.log('=== GET request  at / ===');
-    res.sendFile('./healthcheck.html', { root: __dirname });
-});
+// app.get('/', (req, res) => {
+//     console.log('=== GET request  at / ===');
+//     res.sendFile('./healthcheck.html', { root: __dirname });
+// });
 
 app.get('/api/authors/health', (req, res) => {
     console.log('=== GET request  at /api/authors/healthcheck ===');
