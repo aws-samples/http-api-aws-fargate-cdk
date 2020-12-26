@@ -509,7 +509,7 @@ At the second prompt, enter y and CDK cli shall deploy the HttpApiStack and will
 
 ## Testing the Http Api 
 
-Take a note of the EC2 ip address along with the Http Api endpoints of the Book Service and Author Service. Using the Cloud9 terminal run the following commands:
+Take a note of the EC2 ip address along with the Http Api endpoints of the Book Service and Author Service as shown in Fig 6. Using the Cloud9 terminal run the following commands:
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/
 export EC2_IP_ADDRESS=x.x.x.x
@@ -530,7 +530,7 @@ curl -s $AUTHOR_API_URL | jq
 
 *Fig 8 - Author HttpApi based on AuthorService*
 
-Fig 9 shows the integration of the Http Api with the backend Fargate microservices using Vpclink and the Application load balancer listener.
+Fig 9 shows the integration of the Http Api with the backend Fargate microservices using Vpclink and the Application load balancer listener inside the AWS Management Console.
 
 ![HttpApiStack](./images/API_Gateway.png)
 *Fig 9 - Http Api integration with Vpclink*
