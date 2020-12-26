@@ -12,7 +12,7 @@ Solution: With AWS PrivateLink, service connectivity over Transmission Control P
 
 Our solution leverages the existing applications/ APIs running in AWS Fargate behind a Private ALB inside a VPC and proposes an architecture to expose these APIs securely through HTTP APIs using Amazon API Gateway and AWS PrivateLink.
 
-The target audience for this blog post are developers and architects who want to architect API based services using the existing applications running inside Amazon VPCs.
+The target audience for this workshop are developers and architects who want to architect API based services using the existing applications running inside Amazon VPCs.
 
 ## Prerequisites
 In order to implement the instructions laid out in this post, you will need the following:
@@ -558,5 +558,5 @@ aws ecr delete-repository  --repository-name author-service \
 
 ## Conclusion
 
-This blog post demonstrated how to architect HTTP API Based Services using Amazon API Gateway based on existing microservices running behind a Private Application load balancer inside Private VPCs using AWS PrivateLink. The benefit of this serverless architecture is that it takes away the overhead of having to manage underlying servers and helps reduce costs, as you only pay for the time in which your code executes.
+This workshop demonstrated how to architect HTTP API Based Services using Amazon API Gateway based on existing microservices running behind a Private Application load balancer inside Private VPCs using AWS PrivateLink. The benefit of this serverless architecture is that it takes away the overhead of having to manage underlying servers and helps reduce costs, as you only pay for the time in which your code executes.
 
