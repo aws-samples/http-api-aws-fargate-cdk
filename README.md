@@ -550,10 +550,10 @@ To clean up the resources created manually, run the following commands:
 
 ```bash
 aws ecr delete-repository  --repository-name book-service \   
---region us-west-2
+    --region us-west-2
 
 aws ecr delete-repository  --repository-name author-service \   
---region us-west-2
+    --region us-west-2
 ```
 
 ## Conclusion
