@@ -72,7 +72,6 @@ curl -s http://localhost:8080/api/books | jq
 Observe the response as shown in Fig 3.
 
 ![Books Service Preview](./images/BookService.png)
-
 *Fig 3 - Books Service*
 
 - Containerize and test author-service locally
@@ -88,7 +87,6 @@ docker run -p8080:80 author-service
 Click the `Preview/Preview Running Application` and append api/authors/health to the end of the url so that url looks like `https://XXXXXXXXXXXXXXXXXXX.vfs.cloud9.us-west-2.amazonaws.com/api/authors/health` . Observe the response from the running book-service service as shown in Fig 4.
 
 ![Books Service Preview](./images/AuthorService.png)
-
 *Fig 4 - Authors Service*
 
 ### Create Amazon ECR repositories
