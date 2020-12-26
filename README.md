@@ -537,3 +537,23 @@ Fig 9 shows the integration of the Http Api with the backend Fargate microservic
 
 ## Cleanup
 
+To clean up the resources created by the CDK, run the following commands in a terminal of your Cloud9 instance:
+
+```bash
+cd ~/environment/http-api-aws-fargate-cdk/cdk/singleAccount/
+cdk destroy --all
+```
+
+At the prompt, enter y.
+
+To clean up the resources created manually, run the following commands:
+
+```bash
+aws ecr delete-repository  --repository-name book-service \   
+--region us-west-2
+
+aws ecr delete-repository  --repository-name author-service \   
+--region us-west-2
+```
+
+
