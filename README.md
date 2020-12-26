@@ -18,7 +18,6 @@ In order to implement the instructions laid out in this post, you will need the 
 As shown in Fig 1, we create one AWS CDK application consisting of two AWS CDK stacks FargateVpclinkStack and HttpApiStack. Inside the FargateVpclinkStack, we deploy two NodeJS microservices (book-service and author-service) using Amazon Fargate within the Producer VPC. An internal load balancer distributes external incoming application traffic across these two microservices. In order to implement the private integration we create a VpcLink to encapsulate connections between API Gateway and these microservices. Inside the HttpApiStack, we create an Http Api that integrates with the Amazon Fargate microservices running inside the FargateVpclinkStack using the Vpclink and internal load balancer listener.
 
 ![Architecture](./images/Architecture.png)
-
 *Fig 1 - Architecture*
 
 Here are the steps we’ll be following to implement the above architecture:
@@ -135,7 +134,7 @@ cdk --version
 Take a note of the latest version that you install, at the time of writing this post it is 1.79.0. Open the package.json file and replace the version “1.79.0” of the following modules with the latest version that you have installed above.
 
 ```typescript
-"@aws-cdk/assert": "1.79.0",
+    "@aws-cdk/assert": "1.79.0",
     "@aws-cdk/aws-apigatewayv2": "1.79.0",
     "@aws-cdk/core": "1.79.0",
     "@aws-cdk/aws-ec2": "1.79.0",
@@ -175,7 +174,7 @@ These two variables enable us to export the provisioned Vpclink along with the A
 
 This single line of code creates a ProducerVPC with two Public and two Private Subnets.
 ```typescript
-const vpc = new ec2.Vpc(this, "ProducerVPC");
+    const vpc = new ec2.Vpc(this, "ProducerVPC");
 ```
 
 **ECS Cluster:**
@@ -183,7 +182,7 @@ const vpc = new ec2.Vpc(this, "ProducerVPC");
 This creates an Amazon ECS cluster inside the ProducerVPC, we shall be running the two microservices inside this ECS cluster using AWS Fargate.
 
 ```typescript
-  const cluster = new ecs.Cluster(this, "Fargate Cluster" , {
+    const cluster = new ecs.Cluster(this, "Fargate Cluster" , {
       vpc : vpc,
 });
 ```
