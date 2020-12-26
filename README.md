@@ -96,8 +96,6 @@ Amazon ECR registries host your container images in a highly available and scala
 ```bash
 aws ecr get-login-password --region us-west-2 | docker login  --username AWS   --password-stdin XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com
 
-aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 082037726969.dkr.ecr.us-west-2.amazonaws.com
-
 aws ecr create-repository \
     --repository-name book-service \
     --image-scanning-configuration scanOnPush=false \
