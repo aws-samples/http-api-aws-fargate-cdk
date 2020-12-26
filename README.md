@@ -523,6 +523,7 @@ curl -s $BOOK_API_URL | jq
 curl -s $AUTHOR_API_URL | jq
 ```
 ![HttpApiStack](./images/curl_author_api_1.png)
+
 *Fig 8 - Author HttpApi based on AuthorService*
 
 ## Cleanup
