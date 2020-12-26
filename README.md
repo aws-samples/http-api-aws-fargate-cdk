@@ -152,7 +152,7 @@ This will install all the latest CDK modules under the node_modules directory.
 
 ### Creating AWS resources using the CDK
 
-We shall implement this architecture using AWS CDK application comprising of two individual CDK stacks:
+We shall implement this architecture using an AWS CDK application comprising of two individual CDK stacks:
 
 - **FargateVpclinkStack** -- contains the Fargate and Vpclink resources.
 - **HttpApiStack** -- contains the Http Api integrated with Fargate services using Vpclink.
@@ -529,6 +529,11 @@ curl -s $AUTHOR_API_URL | jq
 ![HttpApiStack](./images/curl_author_api_1.png)
 
 *Fig 8 - Author HttpApi based on AuthorService*
+
+Fig 9 shows the integration of the Http Api with the backend Fargate microservices using Vpclink and the Application load balancer listener.
+
+![HttpApiStack](./images/API_Gateway.png)
+*Fig 9 - Http Api integration with Vpclink*
 
 ## Cleanup
 
