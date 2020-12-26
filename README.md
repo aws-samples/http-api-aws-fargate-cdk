@@ -183,7 +183,7 @@ const vpc = new ec2.Vpc(this, "ProducerVPC");
 This creates an Amazon ECS cluster inside the ProducerVPC, we shall be running the two microservices inside this ECS cluster using AWS Fargate.
 
 ```typescript
-const cluster = new ecs.Cluster(this, "Fargate Cluster" , {
+  const cluster = new ecs.Cluster(this, "Fargate Cluster" , {
       vpc : vpc,
 });
 ```
@@ -200,4 +200,55 @@ AWS Cloud Map allows us to register any application resources, such as microserv
       }
     );
 ```
+**ECS Task Role:**
+```typescript
+    const taskrole = new iam.Role(this, 'ecsTaskExecutionRole', {
+      assumedBy: new iam.ServicePrincipal('ecs-tasks.amazonaws.com')
+    });
 
+    taskrole.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('service-role/AmazonECSTaskExecutionRolePolicy'))
+```
+    
+**Task Definitions:**
+
+A task definition is required to run Docker containers in Amazon ECS, we shall create the task definitions (bookServiceTaskDefinition and authorServiceTaskDefinition) for the two microservices.
+```typescript
+    const bookServiceTaskDefinition = new ecs.FargateTaskDefinition(this,
+'bookServiceTaskDef', {
+      memoryLimitMiB: 512,
+      cpu: 256,
+      taskRole: taskrole
+    });
+
+      const authorServiceTaskDefinition = new ecs.FargateTaskDefinition(this, 
+'authorServiceTaskDef', {
+      memoryLimitMiB: 512,
+      cpu: 256,
+      taskRole: taskrole
+    });
+```
+**Log Groups:**
+
+Let us create two log groups bookServiceLogGroup and authorServiceLogGroup and the two associated log drivers.
+
+```typescript
+    const bookServiceLogGroup = new logs.LogGroup(this, "bookServiceLogGroup", {
+      logGroupName: "/ecs/BookService",
+      removalPolicy: cdk.RemovalPolicy.DESTROY
+    });
+    
+    const authorServiceLogGroup = new logs.LogGroup(this, "authorServiceLogGroup", {
+      logGroupName: "/ecs/AuthorService",
+      removalPolicy: cdk.RemovalPolicy.DESTROY
+    });
+    
+    const bookServiceLogDriver = new ecs.AwsLogDriver({
+        logGroup: bookServiceLogGroup,
+        streamPrefix: "BookService"
+      });
+      
+    const authorServiceLogDriver = new ecs.AwsLogDriver({
+        logGroup: authorServiceLogGroup,
+        streamPrefix: "AuthorService"
+      });
+```
