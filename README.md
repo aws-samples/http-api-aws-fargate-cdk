@@ -517,6 +517,7 @@ export AUTHOR_API_URL=https://xxxxx.execute-api.us-west-2.amazonaws.com/api/auth
 curl -s $BOOK_API_URL | jq
 ```
 ![HttpApiStack](./images/curl_book_api_1.png)
+
 *Fig 7 - Book HttpApi based on BookService*
 
 ```bash
