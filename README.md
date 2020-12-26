@@ -556,4 +556,7 @@ aws ecr delete-repository  --repository-name author-service \
 --region us-west-2
 ```
 
+## Conclusion
+
+This blog post demonstrated how to architect HTTP API Based Services using Amazon API Gateway based on existing microservices running behind a Private Application load balancer inside Private VPCs using AWS PrivateLink. The benefit of this serverless architecture is that it takes away the overhead of having to manage underlying servers and helps reduce costs, as you only pay for the time in which your code executes.
 
