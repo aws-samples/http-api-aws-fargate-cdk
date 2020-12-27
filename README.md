@@ -549,6 +549,8 @@ At the prompt, enter y.
 To clean up the resources created manually, run the following commands:
 
 ```bash
+aws ec2 delete-key-pair --region us-west-2  --key-name "ssh-key" 
+
 aws ecr delete-repository  --repository-name book-service \   
     --region us-west-2
 
