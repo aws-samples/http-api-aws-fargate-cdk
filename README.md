@@ -22,7 +22,7 @@ In order to implement the instructions laid out in this post, you will need the 
 ## Architecture
 As shown in Fig 1, we shall create one AWS CDK application consisting of two AWS CDK stacks **FargateVpclinkStack** and **HttpApiStack**. Inside the FargateVpclinkStack, we deploy two NodeJS microservices (book-service and author-service) using Amazon Fargate within the Producer VPC. An internal load balancer distributes external incoming application traffic across these two microservices. In order to implement the private integration we create a VpcLink to encapsulate connections between API Gateway and these microservices. Inside the HttpApiStack, we create an Http Api that integrates with the Amazon Fargate microservices running inside the FargateVpclinkStack using the Vpclink and internal load balancer listener.
 
-![Architecture](./images/Architecture-1.png)
+![Architecture](./images/Architecture.png)
 *Fig 1 - Architecture*
 
 Here are the steps we’ll be following to implement the above architecture:
