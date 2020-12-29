@@ -60,7 +60,7 @@ cd ~/environment/http-api-aws-fargate-cdk/src/book-service
 npm install --save 
 docker build -t book-service  .
 docker tag book-service:latest \ 
-XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/book-service:latest
+    XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/book-service:latest
 
 docker run -p8080:80 book-service
 ```
@@ -85,7 +85,7 @@ cd ~/environment/http-api-aws-fargate-cdk/src/author-service
 npm install --save 
 docker build -t author-service  .
 docker tag author-service:latest \ 
-XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/author-service:latest
+    XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/author-service:latest
 
 docker run -p8080:80 author-service
 ```
