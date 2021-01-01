@@ -413,7 +413,7 @@ It is easy to expose our HTTP/HTTPS resources behind an Amazon VPC for access by
 
 **HttpApiStack**
 
-![FargateVpclinkStack](./images/HttpApiStack.png)
+<image src="./images/HttpApiStack.png"  height=400px>
 
 Let us create an ssh key pair using aws cli:
 
