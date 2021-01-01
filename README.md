@@ -161,6 +161,9 @@ Let us discuss these stacks one by one.
 
 ### **FargateVpclinkStack**
 
+![FargateVpclinkStack](./images/FargateVpclinkStack.png)
+
+
 Under the cdk/singleAccount/lib folder, open the fargate-vpclink-stack.ts file and let us explore the following different CDK constructs.
 
 Export Vpclink and ALB Listener:
@@ -410,6 +413,8 @@ It is easy to expose our HTTP/HTTPS resources behind an Amazon VPC for access by
 ## Create an HTTP API based on the Fargate Services
 
 **HttpApiStack**
+
+![FargateVpclinkStack](./images/HttpApiStack.png)
 
 Let us create an ssh key pair using aws cli:
 
