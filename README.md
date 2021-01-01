@@ -160,7 +160,9 @@ We shall implement this architecture using an AWS CDK application comprising of 
 Let us discuss these stacks one by one.
 
 ### **FargateVpclinkStack**
-<image align="center" src="./images/FargateVpclinkStack.png"  height=500px>
+<p align="center">
+<image src="./images/FargateVpclinkStack.png"  height=500px>
+</p>
 
 Under the cdk/singleAccount/lib folder, open the fargate-vpclink-stack.ts file and let us explore the following different CDK constructs.
 
