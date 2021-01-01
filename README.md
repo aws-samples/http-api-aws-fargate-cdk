@@ -413,7 +413,7 @@ It is easy to expose our HTTP/HTTPS resources behind an Amazon VPC for access by
 
 **HttpApiStack**
 
-<image src="./images/HttpApiStack.png"  height=400px>
+<image src="./images/HttpApiStack.png"  height=300px>
 
 Let us create an ssh key pair using aws cli:
 
