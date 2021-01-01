@@ -161,8 +161,7 @@ Let us discuss these stacks one by one.
 
 ### **FargateVpclinkStack**
 
-![FargateVpclinkStack](./images/FargateVpclinkStack.png)
-
+<image src="./images/FargateVpclinkStack.png"  height=200px>
 
 Under the cdk/singleAccount/lib folder, open the fargate-vpclink-stack.ts file and let us explore the following different CDK constructs.
 
