@@ -411,8 +411,9 @@ It is easy to expose our HTTP/HTTPS resources behind an Amazon VPC for access by
 ## Create an HTTP API based on the Fargate Services
 
 **HttpApiStack**
-
-<image align="center" src="./images/HttpApiStack.png"  height=300px>
+<p align="center"> 
+<image src="./images/HttpApiStack.png"  height=300px>
+</p>
 
 Let us create an ssh key pair using aws cli:
 
