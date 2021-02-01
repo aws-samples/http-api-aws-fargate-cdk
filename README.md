@@ -152,7 +152,7 @@ npm install -g aws-cdk@latest
 cdk --version
 ```
 
-Take a note of the latest version that you install, at the time of writing this post it is 1.79.0. Open the package.json file and replace the version “1.79.0” of the following modules with the latest version that you have installed above.
+Take a note of the latest version that you install, at the time of writing this post it is 1.79.0. Open the package.json file in ~/environment/http-api-aws-fargate-cdk/cdk/singleaccount and replace the version “1.79.0” of the following modules with the latest version that you have installed above.
 
 ```typescript
     "@aws-cdk/assert": "1.79.0",
@@ -166,6 +166,7 @@ Take a note of the latest version that you install, at the time of writing this 
     "@aws-cdk/aws-logs": "1.79.0",
 ```
 ```bash
+cd ~/environment/http-api-aws-fargate-cdk/cdk/singleaccount
 npm install
 ```
 This will install all the latest CDK modules under the node_modules directory.
