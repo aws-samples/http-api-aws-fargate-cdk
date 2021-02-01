@@ -504,7 +504,7 @@ Now let us create the Http Api proxy routes using the Api integration.
     });
 ```
 
-## Provisioning AWS resources using the CDK
+## Provision AWS resources using the CDK
 
 Let us first create an ssh key pair using aws cli:
 
