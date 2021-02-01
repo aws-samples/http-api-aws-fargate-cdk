@@ -532,9 +532,9 @@ At the prompt, enter y and CDK cli shall deploy the FargateVpclinkStack and will
 
 At the second prompt, enter y and CDK cli shall deploy the HttpApiStack and will create 21 resources.
 
-## Testing the Http Api 
+## Test the Http Api 
 
-Take a note of the EC2 ip address along with the Http Api endpoints of the Book Service and Author Service as shown in Fig 6. Using the Cloud9 terminal run the following commands:
+Take a note of the EC2 ip address along with the Http Api endpoints of the Book Service and Author Service as shown in Fig 6. We shall connect to the EC2 instance in the consumer VPC to test the HTTP API. Using the Cloud9 terminal run the following commands:
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/
 export EC2_IP_ADDRESS=x.x.x.x
