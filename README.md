@@ -144,7 +144,7 @@ docker push XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/author-service:latest
 
 The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to model and provision your cloud application resources using familiar programming languages. If you would like to familiarize yourself the CDKWorkshop is a great place to start.
 
-Using Cloud9 environment, open a new Terminal and use the following commands:
+Using Cloud9 terminal and use the following commands:
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/cdk
 npm install -g aws-cdk@latest
@@ -574,7 +574,7 @@ To delete the ssh key pair, run the following command:
 ```bash
 aws ec2 delete-key-pair --region us-west-2  --key-name "ssh-key" 
 ```
-Log into the AWS Management Console and delete book-service and author-service repositories. Also delete the Cloud9 environment.
+Log into the AWS Management Console and delete **book-service** and **author-service** repositories. Also delete the Cloud9 environment.
 
 ## Conclusion
 
