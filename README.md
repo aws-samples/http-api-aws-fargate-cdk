@@ -28,11 +28,11 @@ As shown in Fig 1, we shall create one AWS CDK application consisting of two AWS
 Here are the steps we’ll be following to implement the above architecture:
 
 - Create and configure AWS Cloud9 environment
-- Develop two sample microservices
+- Build two sample microservices
 - Deploy the sample services on Amazon ECS using Fargate
 - Create an HTTP API based on the Fargate Services
-- Provisioning AWS resources using the CDK
-- Testing the Http Api
+- Provision AWS resources using the CDK
+- Test the Http Api
 - Cleanup
 
 
@@ -45,7 +45,7 @@ Click Cloud9 and create an AWS Cloud9 environment in the us-west-2 region based 
 sudo yum install jq -y
 ```
 
-## Develop two sample microservices
+## Build two sample microservices
 
 ### Clone the GitHub repository
 
@@ -53,7 +53,9 @@ Open a new terminal inside AWS Cloud9 IDE and run:
 
 git clone https://github.com/aws-samples/http-api-aws-fargate-cdk.git
 
-- Containerize and test book-service locally
+### Build and test book-service locally
+
+Replace XXXXXXXXXXX with your AWS account id. 
 
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/src/book-service
@@ -79,7 +81,10 @@ Observe the response as shown in Fig 3.
 ![Books Service Preview](./images/BookService.png)
 *Fig 3 - Books Service*
 
-- Containerize and test author-service locally
+### Build and test author-service locally
+
+Replace XXXXXXXXXXX with your AWS account id.
+
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/src/author-service
 npm install --save 
