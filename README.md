@@ -81,12 +81,12 @@ Observe the response as shown in the right hand pane of Fig 3.
 ![Books Service Preview](./images/BookService.png)
 *Fig 3 - Books Service*
 
-In order to avoid the port conflict, kill the book-service container by running: 
+In order to avoid the port conflict later on, kill the book-service container by running: 
 
 ```bash
 docker ps
 ```
-Get the 'CONTAINER ID' and then run:
+Get the 'CONTAINER ID' from the previous command and then run:
 
 ```bash
 docker kill <CONTAINER ID>
@@ -114,6 +114,8 @@ Click the `Preview/Preview Running Application` and append api/authors/health to
 
 Amazon ECR registries host your container images in a highly available and scalable architecture, allowing you to deploy containers reliably for your applications. Each AWS account is provided with a single (default) Amazon ECR registry. 
 
+Replace XXXXXXXXXXX with your AWS account id.
+
 ```bash
 aws ecr get-login-password --region us-west-2 | docker login  --username AWS   --password-stdin XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com
 
@@ -129,6 +131,8 @@ aws ecr create-repository \
 ```
 
 ### Push images to Amazon ECR
+
+Replace XXXXXXXXXXX with your AWS account id.
 
 ```bash
 docker push XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/book-service:latest
