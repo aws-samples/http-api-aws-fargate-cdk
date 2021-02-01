@@ -28,8 +28,7 @@ Here are the steps we’ll be following to implement the above architecture:
 
 - Create and configure AWS Cloud9 environment
 - Build two sample microservices
-- Deploy the sample services on Amazon ECS using Fargate
-- Create an HTTP API based on the Fargate Services
+- Examine the CDK code for FargateVpclinkStack and HttpApiStack
 - Provision AWS resources using the CDK
 - Test the Http Api
 - Cleanup
@@ -138,7 +137,7 @@ docker push XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/book-service:latest
 
 docker push XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/author-service:latest
 ```
-## Deploy the sample microservices on Amazon ECS using Fargate
+## Examine the CDK code for FargateVpclinkStack and HttpApiStack
 
 ### Install AWS CDK
 
