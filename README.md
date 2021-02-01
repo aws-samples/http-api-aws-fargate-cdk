@@ -139,36 +139,6 @@ docker push XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/author-service:latest
 ```
 ## Examine the CDK code for FargateVpclinkStack and HttpApiStack
 
-### Install AWS CDK
-
-The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to model and provision your cloud application resources using familiar programming languages. If you would like to familiarize yourself the CDKWorkshop is a great place to start.
-
-Using Cloud9 terminal and use the following commands:
-```bash
-cd ~/environment/http-api-aws-fargate-cdk/cdk
-npm install -g aws-cdk@latest
-cdk --version
-```
-
-Take a note of the latest version that you install, at the time of writing this post it is 1.79.0. Open the package.json file in ~/environment/http-api-aws-fargate-cdk/cdk/singleaccount and replace the version “1.79.0” of the following modules with the latest version that you have installed above.
-
-```typescript
-    "@aws-cdk/assert": "1.79.0",
-    "@aws-cdk/aws-apigatewayv2": "1.79.0",
-    "@aws-cdk/core": "1.79.0",
-    "@aws-cdk/aws-ec2": "1.79.0",
-    "@aws-cdk/aws-ecr": "1.79.0",
-    "@aws-cdk/aws-ecs": "1.79.0",
-    "@aws-cdk/aws-elasticloadbalancingv2": "1.79.0",
-    "@aws-cdk/aws-iam": "1.79.0",
-    "@aws-cdk/aws-logs": "1.79.0",
-```
-```bash
-cd ~/environment/http-api-aws-fargate-cdk/cdk/singleaccount
-npm install
-```
-This will install all the latest CDK modules under the node_modules directory.
-
 ### Creating AWS resources using the CDK
 
 We shall implement this architecture using an AWS CDK application comprising of two individual CDK stacks:
@@ -505,7 +475,37 @@ Now let us create the Http Api proxy routes using the Api integration.
 
 ## Provision AWS resources using the CDK
 
-Let us first create an ssh key pair using aws cli:
+### Install AWS CDK
+
+The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to model and provision your cloud application resources using familiar programming languages. If you would like to familiarize yourself the CDKWorkshop is a great place to start.
+
+Using Cloud9 terminal and use the following commands:
+```bash
+cd ~/environment/http-api-aws-fargate-cdk/cdk
+npm install -g aws-cdk@latest
+cdk --version
+```
+
+Take a note of the latest version that you install, at the time of writing this post it is 1.79.0. Open the package.json file in ~/environment/http-api-aws-fargate-cdk/cdk/singleaccount and replace the version “1.79.0” of the following modules with the latest version that you have installed above.
+
+```typescript
+    "@aws-cdk/assert": "1.79.0",
+    "@aws-cdk/aws-apigatewayv2": "1.79.0",
+    "@aws-cdk/core": "1.79.0",
+    "@aws-cdk/aws-ec2": "1.79.0",
+    "@aws-cdk/aws-ecr": "1.79.0",
+    "@aws-cdk/aws-ecs": "1.79.0",
+    "@aws-cdk/aws-elasticloadbalancingv2": "1.79.0",
+    "@aws-cdk/aws-iam": "1.79.0",
+    "@aws-cdk/aws-logs": "1.79.0",
+```
+```bash
+cd ~/environment/http-api-aws-fargate-cdk/cdk/singleaccount
+npm install
+```
+This will install all the latest CDK modules under the node_modules directory.
+
+Let us now create an ssh key pair using AWS CLI:
 
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/
