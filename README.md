@@ -147,7 +147,7 @@ The AWS Cloud Development Kit (AWS CDK) is an open-source software development f
 
 Using Cloud9 environment, open a new Terminal and use the following commands:
 ```bash
-cd http-api-aws-fargate-cdk/cdk
+cd ~/environment/http-api-aws-fargate-cdk/cdk
 npm install -g aws-cdk@latest
 cdk --version
 ```
