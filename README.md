@@ -16,8 +16,7 @@ The target audience for this workshop are developers and architects who want to 
 
 ## Prerequisites
 In order to implement the instructions laid out in this post, you will need the following:
-- An [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) (Producer Account)
-- A [GitHub](https://help.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account) account
+- An [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
 ## Architecture
 As shown in Fig 1, we shall create one AWS CDK application consisting of two AWS CDK stacks **FargateVpclinkStack** and **HttpApiStack**. Inside the FargateVpclinkStack, we deploy two NodeJS microservices (book-service and author-service) using Amazon Fargate within the Producer VPC. An internal load balancer distributes external incoming application traffic across these two microservices. In order to implement the private integration we create a VpcLink to encapsulate connections between API Gateway and these microservices. Inside the HttpApiStack, we create an Http Api that integrates with the Amazon Fargate microservices running inside the FargateVpclinkStack using the Vpclink and internal load balancer listener.
@@ -436,14 +435,6 @@ It is easy to expose our HTTP/HTTPS resources behind an Amazon VPC for access by
 <image src="./images/HttpApiStack.png"  height=300px>
 </p>
 
-Let us first create an ssh key pair using aws cli:
-
-```bash
-cd ~/environment/http-api-aws-fargate-cdk/
-aws ec2 create-key-pair --region us-west-2  --key-name "ssh-key"  |  jq -r ".KeyMaterial" > ssh-key.pem
-chmod 400 ssh-key.pem
-```
-
 Under the ~/environment/http-api-aws-fargate-cdk/cdk/singleAccount/lib folder, open the httpApi-stack.ts file and let us explore the following different CDK constructs.
 
 **Consumer VPC:**
@@ -515,6 +506,13 @@ Now let us create the Http Api proxy routes using the Api integration.
 
 ## Provisioning AWS resources using the CDK
 
+Let us first create an ssh key pair using aws cli:
+
+```bash
+cd ~/environment/http-api-aws-fargate-cdk/
+aws ec2 create-key-pair --region us-west-2  --key-name "ssh-key"  |  jq -r ".KeyMaterial" > ssh-key.pem
+chmod 400 ssh-key.pem
+```
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/cdk/singleAccount
 npm run build
