@@ -76,10 +76,21 @@ Open a new terminal inside AWS Cloud9 IDE and run the following curl command:
 ```bash
 curl -s http://localhost:8080/api/books | jq
 ```
-Observe the response as shown in Fig 3.
+Observe the response as shown in the right hand pane of Fig 3.
 
 ![Books Service Preview](./images/BookService.png)
 *Fig 3 - Books Service*
+
+In order to avoid the port conflict, kill the book-service container by running: 
+
+```bash
+docker ps
+```
+Get the 'CONTAINER ID' and then run:
+
+```bash
+docker kill <CONTAINER ID>
+```
 
 ### Build and test author-service locally
 
@@ -94,7 +105,7 @@ docker tag author-service:latest \
 
 docker run -p8080:80 author-service
 ```
-Click the `Preview/Preview Running Application` and append api/authors/health to the end of the url so that url looks like `https://XXXXXXXXXXXXXXXXXXX.vfs.cloud9.us-west-2.amazonaws.com/api/authors/health` . Observe the response from the running book-service service as shown in Fig 4.
+Click the `Preview/Preview Running Application` and append api/authors/health to the end of the url so that url looks like `https://XXXXXXXXXXXXXXXXXXX.vfs.cloud9.us-west-2.amazonaws.com/api/authors/health` . Observe the response from the running book-service service as shown in the right hand pane of Fig 4.
 
 ![Books Service Preview](./images/AuthorService.png)
 *Fig 4 - Authors Service*
