@@ -569,17 +569,12 @@ cdk destroy --all
 
 At the prompt, enter y.
 
-To clean up the resources created manually, run the following commands:
+To delete the ssh key pair, run the following command:
 
 ```bash
 aws ec2 delete-key-pair --region us-west-2  --key-name "ssh-key" 
-
-aws ecr delete-repository  --repository-name book-service \   
-    --region us-west-2
-
-aws ecr delete-repository  --repository-name author-service \   
-    --region us-west-2
 ```
+Log into the AWS Management Console and delete book-service and author-service repositories. Also delete the Cloud9 environment.
 
 ## Conclusion
 
