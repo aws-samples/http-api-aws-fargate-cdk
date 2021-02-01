@@ -431,14 +431,12 @@ It is easy to expose our HTTP/HTTPS resources behind an Amazon VPC for access by
     });
 ```
 
-## Create an HTTP API based on the Fargate Services
-
-**HttpApiStack**
+### **HttpApiStack** 
 <p align="center"> 
 <image src="./images/HttpApiStack.png"  height=300px>
 </p>
 
-Let us create an ssh key pair using aws cli:
+Let us first create an ssh key pair using aws cli:
 
 ```bash
 cd ~/environment/http-api-aws-fargate-cdk/
@@ -446,7 +444,7 @@ aws ec2 create-key-pair --region us-west-2  --key-name "ssh-key"  |  jq -r ".Key
 chmod 400 ssh-key.pem
 ```
 
-Under the cdk/singleAccount/lib folder, open the httpApi-stack.ts file and let us explore the following different CDK constructs.
+Under the ~/environment/http-api-aws-fargate-cdk/cdk/singleAccount/lib folder, open the httpApi-stack.ts file and let us explore the following different CDK constructs.
 
 **Consumer VPC:**
 
