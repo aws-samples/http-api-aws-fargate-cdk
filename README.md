@@ -130,7 +130,7 @@ aws ecr create-repository \
 
 ### Push images to Amazon ECR
 
-Replace XXXXXXXXXXX with your AWS account id.
+Replace XXXXXXXXXXX with your AWS account id and using terminal inside AWS Cloud9 IDE run:
 
 ```bash
 docker push XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/book-service:latest
