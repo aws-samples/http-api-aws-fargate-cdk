@@ -112,7 +112,7 @@ Click the `Preview/Preview Running Application` and append api/authors/health to
 
 Amazon ECR registries host your container images in a highly available and scalable architecture, allowing you to deploy containers reliably for your applications. Each AWS account is provided with a single (default) Amazon ECR registry. 
 
-Replace XXXXXXXXXXX with your AWS account id.
+Replace XXXXXXXXXXX with your AWS account id and using terminal inside AWS Cloud9 IDE run:
 
 ```bash
 aws ecr get-login-password --region us-west-2 | docker login  --username AWS   --password-stdin XXXXXXXXXXX.dkr.ecr.us-west-2.amazonaws.com
