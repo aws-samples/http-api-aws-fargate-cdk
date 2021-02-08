@@ -477,7 +477,7 @@ Now let us create the Http Api proxy routes using the Api integration.
 
 ### Install AWS CDK
 
-The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to model and provision your cloud application resources using familiar programming languages. If you would like to familiarize yourself the CDKWorkshop is a great place to start.
+The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to model and provision your cloud application resources using familiar programming languages. If you would like to familiarize yourself the [CDKWorkshop](https://cdkworkshop.com/) is a great place to start.
 
 Using Cloud9 terminal and use the following commands:
 ```bash
